@@ -24,6 +24,8 @@ public class TesteEnumBebidas {
             
             
         }
+
+        
         System.out.println("---------------------");
         for (Menu menu : Menu.values()) {
             System.out.println (menu.getOpcao() + " - " + menu.getDescricao());
