@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "testes",
+            "request": "launch",
+            "mainClass": "testes",
+            "projectName": "AulaEnum"
+        },
+        {
+            "type": "java",
             "name": "TesteEnumBebidas",
             "request": "launch",
             "mainClass": "TesteEnumBebidas",
