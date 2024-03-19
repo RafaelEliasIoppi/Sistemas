@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TesteStatic",
+            "request": "launch",
+            "mainClass": "modificstatic.pessoas.TesteStatic",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Teste2",
             "request": "launch",
             "mainClass": "modificfinal.documentos.Teste2",
