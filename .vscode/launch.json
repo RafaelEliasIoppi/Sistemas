@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "TesteEnumBebidas",
+            "request": "launch",
+            "mainClass": "TesteEnumBebidas",
+            "projectName": "AulaEnum"
+        },
+        {
             "name": "(gdb) Anexar",
             "type": "cppdbg",
             "request": "attach",
