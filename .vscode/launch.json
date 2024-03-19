@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Teste7",
+            "request": "launch",
+            "mainClass": "modificabstract.formas.Teste7",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "testes",
             "request": "launch",
             "mainClass": "testes",
