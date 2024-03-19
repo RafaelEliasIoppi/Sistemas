@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "/workspaces/Sistemas/ED2/Arquivos"
+    "cmake.sourceDirectory": "/workspaces/Sistemas/ED2/Arquivos",
+    "java.debug.settings.onBuildFailureProceed": true
 }
