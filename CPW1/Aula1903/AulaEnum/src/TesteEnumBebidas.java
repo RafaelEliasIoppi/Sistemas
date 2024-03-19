@@ -19,7 +19,7 @@ public class TesteEnumBebidas {
     	
     	System.out.println("---------------------");
     	for (DiasSemana dias: DiasSemana.values()) {
-            System.err.println(dias.name());
+            System.out.println(dias.name());
             System.out.println(dias.getDescricao());
             
             
