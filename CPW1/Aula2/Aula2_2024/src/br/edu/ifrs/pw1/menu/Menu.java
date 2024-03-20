@@ -67,8 +67,7 @@ public class Menu {
 		    	        	if(cli.getCpf()!=null) { 
 			    	    	    //números sempre são comparados usando ==
 				    	 	    if(cli.getCpf().getNumero() == numCpfPesq && cli.getCpf().getDigito() == digCpfPesq) {
-				    	    	    JOptionPane.showMessageDialog(null,  
-				    	    	    		"CPF localizado! Ele pertence a:"+cli.getNome());
+				    	    	    JOptionPane.showMessageDialog(null, "CPF localizado! Ele pertence a:"+cli.getNome());
 				    	 		    flag = true;
 				    	 		    break;
 				    	 	    }

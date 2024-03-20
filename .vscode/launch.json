@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Teste",
+            "request": "launch",
+            "mainClass": "visibilidade.testes.Teste",
+            "projectName": "AulaModificadores_2024"
+        },
+        {
+            "type": "java",
+            "name": "Teste",
+            "request": "launch",
+            "mainClass": "visibilidade.pessoas.Teste",
+            "projectName": "AulaModificadores_2024"
+        },
+        {
+            "type": "java",
             "name": "TesteStatic",
             "request": "launch",
             "mainClass": "modificstatic.pessoas.TesteStatic",
