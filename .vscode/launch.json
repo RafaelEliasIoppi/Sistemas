@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Testes",
+            "request": "launch",
+            "mainClass": "Testes",
+            "projectName": "AulaEnum"
+        },
+        {
+            "type": "java",
             "name": "Teste",
             "request": "launch",
             "mainClass": "visibilidade.testes.Teste",

@@ -2,7 +2,7 @@ package br.edu.ifrs.pw1.menu;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 import br.edu.ifrs.pw1.clientes.ClientePessoaFisica;
@@ -12,7 +12,7 @@ import br.edu.ifrs.pw1.documentos.Cpf;
 public class Menu {
 	public static void main(String[] args) {
 		ArrayList<ClientePessoaFisica> clientes = new ArrayList<>();
-		
+		Scanner scanner = new Scanner(System.in);
 		//laço infinito que vai controlar o cadastro dos clientes
 		while(true) {
 			switch(montaMenu()) {
@@ -20,12 +20,21 @@ public class Menu {
 			    	    // String telefone, List<Endereco> enderecos, String nome, Cpf cpf
 			    	    //String logradouro, String complemento, long cep
 			    	    //cpf = long numero e int digito
-			    	    String nome = JOptionPane.showInputDialog("Informe o nome:");
-			    	    String telefone = JOptionPane.showInputDialog("Informe o telefone:");
-			    	    long numCpf = Long.parseLong(JOptionPane.showInputDialog("Informe o número do CPF:"));
-			    	    int digCpf = Integer.parseInt(JOptionPane.showInputDialog("Informe o digito do CPF:"));
+			    	    //String nome = JOptionPane.showInputDialog("Informe o nome:");
+						System.out.println("Informe o nome:");
+						int x = scanner.nextInt();
+				  	    //String telefone = JOptionPane.showInputDialog("Informe o telefone:");
+						
+						System.out.println("Informe o telefone:");
+						String telefone = scanner.next();
+			    	    //long numCpf = Long.parseLong(JOptionPane.showInputDialog("Informe o número do CPF:"));
+			    	    
+						System.out.println("Informe o número do CPF:");
+						long numCpf = scanner.nextLong();		
+						int digCpf = Integer.parseInt(JOptionPane.showInputDialog("Informe o digito do CPF:"));
 			    	    Cpf cpf = new Cpf(numCpf, digCpf);
-			    	    //cada endereco tem: String logradouro, String complemento, long cep
+			    	    
+						//cada endereco tem: String logradouro, String complemento, long cep
 			    	    int numEnderecos = Integer.parseInt(JOptionPane.showInputDialog("Informe o número de endereços:"));
 			    	    //declara o arraylist para adicionar os enderecos de cada cliente pessoa física
 			    	    ArrayList<Endereco> enderecos = new ArrayList<>();
