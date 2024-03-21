@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Menu2",
+            "request": "launch",
+            "mainClass": "br.edu.ifrs.pw1.menu.Menu2",
+            "projectName": "Aula2_2024"
+        },
+        {
+            "type": "java",
             "name": "Testes",
             "request": "launch",
             "mainClass": "Testes",

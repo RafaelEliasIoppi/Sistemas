@@ -1,20 +1,22 @@
-import java.util.Scanner;
-
 package br.edu.ifrs.pw1.menu;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+import br.edu.ifrs.pw1.clientes.ClientePessoaFisica;
+import br.edu.ifrs.pw1.contatos.Endereco;
+import br.edu.ifrs.pw1.documentos.Cpf;
+
 
 public class Menu2 {
     public static void main(String[] args) {
-        String aux = "";
-        for (Menu item : Menu.values()) {
-            aux += item.getOpcao() + " - " + item.getDescricao() + "\n";
-        }
-        System.out.println(aux);
         
-        Scanner scanner = new Scanner(System.in);
-        int opcao = scanner.nextInt();
         
-        // Add your code here to handle the selected option
+
         
-        scanner.close();
+        
+        
     }
 }
