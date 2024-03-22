@@ -30,4 +30,4 @@ insert into funcionario(id_funcionario,nome,salario,id_departamento) values(s_fu
 insert into funcionario(id_funcionario,nome,salario,id_departamento) values(s_funcionario.nextval,'Maria',5000,2);
 
 
-```
+SELECT * FROM departamento;
