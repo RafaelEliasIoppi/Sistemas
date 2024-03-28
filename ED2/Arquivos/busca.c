@@ -12,7 +12,7 @@ int ler_arquivo_para_vetor( char *nome_arquivo, int vetor[], int *tamanho) {
 
     *tamanho = 0; // Inicializa o tamanho do vetor
 
-    while (*tamanho < TAM_VET && fscanf(arquivo, "%d", &vetor[*tamanho]) == 1) {
+    while (*tamanho < TAM_VET && fscanf(arquivo, "%d", &vetor[*tamanho]) == 1) { // 1  indica que o valor foi lido com sucesso e gravado com sucesso
         (*tamanho)++; // Incrementa o tamanho do vetor
     }
 
@@ -50,6 +50,9 @@ int busca_binaria(int vetor[], int tamanho, int valor, int *acessos) {
     
     return -1; // Retorna -1 se o valor não for encontrado
 }
+
+
+
 
 
 int main() {
