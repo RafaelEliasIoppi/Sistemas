@@ -8,8 +8,8 @@ public class Testes {
         String aux = "";
         for(Menu item : Menu.values()) {
             aux += item.getOpcao()  + " - " + item.getDescricao() + "\n";
-              }
-              //javax.swing.JOptionPane.showMessageDialog(null, aux);
+              }javax.swing.JOptionPane.showMessageDialog(null, aux);
+              //
               System.out.println(aux);
             
               System.out.println("---------------------");

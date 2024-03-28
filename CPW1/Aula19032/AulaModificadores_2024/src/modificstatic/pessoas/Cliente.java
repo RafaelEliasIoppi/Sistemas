@@ -4,7 +4,9 @@ public final class Cliente {
 	private String nome;
     public static int contador=0;
     
-    public Cliente(){ this(null);}
+    public Cliente()    { 
+        this(null);
+    }
     public Cliente(String nome) {
           contador++;
           this.nome = nome;
