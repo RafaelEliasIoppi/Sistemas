@@ -1,10 +1,26 @@
 #include <stdio.h>
 #include <locale.h>
 
-#define TAMANHO 10000
+#define TAM_VET 1000000
 
+int ler_arquivo_para_vetor( char *nome_arquivo, int vetor[], int *tamanho) {
+    FILE *arquivo = fopen(nome_arquivo, "r"); // Abre o arquivo para leitura
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo %s.\n", nome_arquivo);
+        return 0; // Retorna 0 se houver erro ao abrir o arquivo
+    }
+
+    *tamanho = 0; // Inicializa o tamanho do vetor
+
+    while (*tamanho < TAM_VET && fscanf(arquivo, "%d", &vetor[*tamanho]) == 1) {
+        (*tamanho)++; // Incrementa o tamanho do vetor
+    }
+
+    fclose(arquivo); // Fecha o arquivo
+    return 1; // Retorna 1 se os dados foram lidos com sucesso
+}
 // Função para buscar um valor no vetor usando busca sequencial
-int busca_sequencial(const int vetor[], int tamanho, int valor, int *acessos) { //recebemos o vetor da busca, tam do vetor, o valor buscado, o contador é um ponteiro
+int busca_sequencial( int vetor[], int tamanho, int valor, int *acessos) { // o vetor da busca, tam do vetor, o valor buscado, o contador é um ponteiro
     for (int i = 0; i < tamanho; i++) {
         (*acessos)++; // Incrementa o contador de acessos. incrementa a variavel cont_sequencial
         if (vetor[i] == valor) {
@@ -15,7 +31,7 @@ int busca_sequencial(const int vetor[], int tamanho, int valor, int *acessos) { 
 }
 
 // Função para buscar um valor no vetor usando busca binária
-int busca_binaria(const int vetor[], int tamanho, int valor, int *acessos) {
+int busca_binaria(int vetor[], int tamanho, int valor, int *acessos) {
     int esquerda = 0;
     int direita = tamanho - 1;
     
@@ -35,28 +51,11 @@ int busca_binaria(const int vetor[], int tamanho, int valor, int *acessos) {
     return -1; // Retorna -1 se o valor não for encontrado
 }
 
-// Função para ler os dados de um arquivo e armazená-los em um vetor
-int ler_arquivo_para_vetor(const char *nome_arquivo, int vetor[], int *tamanho) {
-    FILE *arquivo = fopen(nome_arquivo, "r"); // Abre o arquivo para leitura
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo %s.\n", nome_arquivo);
-        return 0; // Retorna 0 se houver erro ao abrir o arquivo
-    }
-
-    *tamanho = 0; // Inicializa o tamanho do vetor
-
-    while (*tamanho < TAMANHO && fscanf(arquivo, "%d", &vetor[*tamanho]) == 1) {
-        (*tamanho)++; // Incrementa o tamanho do vetor
-    }
-
-    fclose(arquivo); // Fecha o arquivo
-    return 1; // Retorna 1 se os dados foram lidos com sucesso
-}
 
 int main() {
     setlocale(LC_ALL, "Portuguese"); // Define o locale para português
 
-    int vetor[TAMANHO]; // Vetor para armazenar os dados
+    int vetor[TAM_VET]; // Vetor para armazenar os dados
     int tamanho_vetor; // Tamanho atual do vetor
     int cont_sequencial = 0; // Contador de acessos para a busca sequencial
     int total_cont_sequencial = 0; // Total de acessos para a busca sequencial
