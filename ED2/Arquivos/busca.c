@@ -13,7 +13,7 @@ int ler_arquivo_para_vetor( char *nome_arquivo, int vetor[], int *tamanho) {
     *tamanho = 0; // Inicializa o tamanho do vetor
 
     while (*tamanho < TAM_VET && fscanf(arquivo, "%d", &vetor[*tamanho]) == 1) { // 1  indica que o valor foi lido com sucesso e gravado com sucesso
-        (*tamanho)++; // Incrementa o tamanho do vetor
+        (*tamanho)++; // Incrementa o tamanho do vetor após a leitura de um valor
     }
 
     fclose(arquivo); // Fecha o arquivo
@@ -79,7 +79,7 @@ int main() {
     for (int i = 0; i < num_valores; i++) {
         int indice = busca_sequencial(vetor, tamanho_vetor, valores[i], &cont_sequencial);//passa o vetor da busca, o TAM do vetor, o valor ,e o contador (ponteiro)
         if (indice != -1) { // sempre que o valor é diferente de -1 o contador é incrementado
-            total_cont_sequencial += cont_sequencial; //
+            total_cont_sequencial += cont_sequencial; //incrementa o contador de acessos
             printf("Valor --> %d --> encontrado na posição --> %d com --> %d acessos (busca sequencial).\n", valores[i], indice, cont_sequencial);
         } else {
             printf("Valor --> %d --> não encontrado (busca sequencial).\n", valores[i]);
@@ -90,7 +90,7 @@ int main() {
 for (int i = 0; i < num_valores; i++) {
     int indice = busca_binaria(vetor, tamanho_vetor, valores[i], &cont_binaria);
     if (indice != -1) {
-        total_cont_binaria += cont_binaria;
+        total_cont_binaria += cont_binaria; //incrementa o contador de acessos  
         printf("Valor --> %d --> encontrado na posição --> %d com --> %d acessos (busca binária).\n", valores[i], indice, cont_binaria);
     } else {
         printf("Valor --> %d --> não encontrado (busca binária).\n", valores[i]);
