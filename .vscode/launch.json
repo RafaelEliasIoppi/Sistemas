@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Conjunto1",
+            "request": "launch",
+            "mainClass": "conjuntos_slides.Conjunto1",
+            "projectName": "Colecoes_Slides"
+        },
+        {
+            "type": "java",
             "name": "Pilha",
             "request": "launch",
             "mainClass": "listas_slides.Pilha",
