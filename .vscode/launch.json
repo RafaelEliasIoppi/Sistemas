@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Pilha",
+            "request": "launch",
+            "mainClass": "listas_slides.Pilha",
+            "projectName": "Colecoes_Slides"
+        },
+        {
+            "type": "java",
+            "name": "Lista2",
+            "request": "launch",
+            "mainClass": "listas_slides.Lista2",
+            "projectName": "Colecoes_Slides"
+        },
+        {
+            "type": "java",
             "name": "Lista1",
             "request": "launch",
             "mainClass": "listas_slides.Lista1",
