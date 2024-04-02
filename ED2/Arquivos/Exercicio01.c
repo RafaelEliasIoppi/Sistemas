@@ -11,7 +11,7 @@ int verificarPalavra(const char *conteudo, const char *palavra) {
     for (int i = 0; i <= tamanhoConteudo - tamanhoPalavra; i++) {
         bool encontrada = true;
         for (int j = 0; j < tamanhoPalavra; j++) {
-            if (tolower(conteudo[i + j]) != tolower(palavra[j])) {
+            if (tolower(conteudo[i + j]) != tolower(palavra[j])) { //Compara letra por letra com todo o conteúdo
                 encontrada = false;
                 break;
             }
@@ -30,7 +30,7 @@ int main() {
     char conteudo[410000];
     int tamanho = 0;
     int contA = 0;
-    int direito, dever = 0;
+    int direito =0;
     int dever = 0;
     int deveres = 0;
 
@@ -43,6 +43,7 @@ int main() {
     // Lê o conteúdo do arquivo e armazena no vetor
     while ((caracter = fgetc(txt)) != EOF) {
         conteudo[tamanho++] = caracter; // Armazena o caractere no vetor conteudo e incrementa o tamanho
+
         if (caracter == 'a' || caracter == 'A') {
             contA++;
         }
