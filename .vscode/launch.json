@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Lista1",
+            "request": "launch",
+            "mainClass": "listas_slides.Lista1",
+            "projectName": "Colecoes_Slides"
+        },
+        {
+            "type": "java",
             "name": "Menu2",
             "request": "launch",
             "mainClass": "br.edu.ifrs.pw1.menu.Menu2",
