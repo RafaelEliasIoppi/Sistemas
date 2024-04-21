@@ -14,4 +14,4 @@ public interface ListaGen {
     void removerElementoPosicao(int indice) throws IndexOutOfBoundsException;
 }
 
-}
+
