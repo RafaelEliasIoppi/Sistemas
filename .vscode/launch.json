@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Exercicio1",
+            "request": "launch",
+            "mainClass": "Exercicio1",
+            "projectName": "TratamentoExcecoes"
+        },
+        {
+            "type": "java",
+            "name": "Questao5_Lista2",
+            "request": "launch",
+            "mainClass": "Questao5_Lista2",
+            "projectName": "TratamentoExcecoes"
+        },
+        {
+            "type": "java",
+            "name": "Exercicio6",
+            "request": "launch",
+            "mainClass": "Exercicio6",
+            "projectName": "TratamentoExcecoes"
+        },
+        {
+            "type": "java",
             "name": "MexicanWave",
             "request": "launch",
             "mainClass": "MexicanWave",
