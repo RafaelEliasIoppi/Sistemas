@@ -9,12 +9,19 @@ public class Exercicio9 {
         public String getNome() {
             return nome;
         }
+
+      @ Override
+        public String toString() {
+        return "Objeto: " + nome;
+}
     }
     
     public static Objeto criaObjeto() { 
         // lógica para criar um objeto
         return new Objeto("Rafael"); // supondo que você tenha uma lógica real aqui
     }
+
+  
 
     public static void main(String[] args) {
         try {
@@ -25,6 +32,7 @@ public class Exercicio9 {
                 System.out.println("O objeto retornado é nulo.");
             }
         } catch (NullPointerException e) {
+            System.err.println("O objeto retornado pelo método criaObjeto() é nulo.");
             e.printStackTrace();
         }
     }
